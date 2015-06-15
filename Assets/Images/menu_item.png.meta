@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: 7af96eccf09a24247923e7fce858c108
+timeCreated: 1434054408
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: menu_play
+    21300002: menu_item
+    21300004: menu_settings
+    21300006: menu_level
+    21300008: menu_level_lock
+    21300010: menu_star_on
+    21300012: menu_num_2
+    21300014: menu_level_9
+    21300016: menu_level_1
+    21300018: menu_level_5
+    21300020: menu_level_3
+    21300022: menu_level_4
+    21300024: menu_level_6
+    21300026: menu_level_7
+    21300028: menu_level_8
+    21300030: menu_star_off
+    21300032: arrow_1
+    21300034: arrow_2
+    21300036: button_next
+    21300038: menu_item_1
+    21300040: button_menu
+    21300042: button_replay
+    21300044: button_back
+    21300046: menu_item_5
+    21300048: menu_item_6
+    21300050: menu_item_7
+    21300052: menu_item_8
+    21300054: menu_item_9
+    21300056: menu_item_10
+    21300058: boom
+    21300060: gold
+    21300062: the_saw
+    21300064: rock_1
+    21300066: button_blank
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: menu_play
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 714
+        width: 295
+        height: 307
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_item
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 874
+        width: 105
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_settings
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 866
+        width: 156
+        height: 153
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 874
+        width: 165
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_lock
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 937
+        width: 68
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_star_on
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 964
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_num_2
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 868
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_9
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 864
+        width: 81
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 785
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_5
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 785
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_3
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 785
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_4
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 785
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_6
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 785
+        width: 76
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_7
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 785
+        width: 92
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_level_8
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 785
+        width: 106
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: menu_star_off
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 964
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arrow_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 405
+        width: 180
+        height: 282
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arrow_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 74
+        width: 180
+        height: 282
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_menu
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 650
+        width: 85
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_back
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 596
+        width: 174
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boom
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 442
+        width: 122
+        height: 131
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 477
+        width: 112
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: the_saw
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 427
+        width: 165
+        height: 163
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 133
+        width: 188
+        height: 223
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_next
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 641
+        width: 86
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_replay
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 650
+        width: 85
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: button_blank
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 651
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

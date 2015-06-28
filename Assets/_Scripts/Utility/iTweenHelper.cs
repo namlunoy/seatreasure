@@ -3,7 +3,7 @@ using System.Collections;
 
 public class iTweenHelper 
 {
-
+    
     public static IEnumerator Rigging(GameObject go, Vector3 originalPos,Vector3 amount, float time = 1, float wait = 0)
     {
         yield return new WaitForSeconds(wait);

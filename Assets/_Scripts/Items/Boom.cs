@@ -5,14 +5,21 @@ using UnityEngine.UI;
 public class Boom : MonoBehaviour
 {
     public Text txt;
-    public int time;
+    private int time;
     private bool isCounting = false;
     public GameObject particle;
     public float phamViNo;
     // Use this for initialization
     void Start()
     {
-        txt.text = time.ToString();
+        if (!int.TryParse(txt.text, out time))
+            time = 3;
+
+        if (Application.loadedLevelName == "Level_5")
+        {
+            time = Random.Range(0, 2);
+            txt.text = time.ToString();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -28,12 +35,12 @@ public class Boom : MonoBehaviour
 
     IEnumerator Counting()
     {
-        do
+        while (time > 0)
         {
             time--;
             txt.text = time.ToString();
             yield return new WaitForSeconds(1);
-        } while (time > 0);
+        };
 
         txt.text = "";
 
@@ -46,7 +53,7 @@ public class Boom : MonoBehaviour
             if (o.tag == "Rock_Exp")
                 o.gameObject.SetActive(false);
             else if (o.tag == "Ship")
-                ShipController.Instance.Chet();
+                StartCoroutine(ShipController.Instance.Chet_Async());
         }
 
         particle.transform.position = this.transform.position;

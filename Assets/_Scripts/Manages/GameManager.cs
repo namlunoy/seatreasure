@@ -61,8 +61,7 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject o in toTurnOff)
             o.SetActive(false);
-
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         print("show panel");
         panel_lose.SetActive(true);
     }

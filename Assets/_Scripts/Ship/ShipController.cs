@@ -15,6 +15,7 @@ public class ShipController : MonoBehaviour
     public int StarCount { get { return starCount; } }
     private Animator animator;
     private bool co_Symbol_Cut = false;
+    private bool co_Key = false;
 
     #endregion
 
@@ -31,20 +32,19 @@ public class ShipController : MonoBehaviour
     {
         if (other.tag == "Saw")
         {
-            //Va phải cái cưa chết đứng
-            _isAlive = false;
-            GameManager.Instance.Game_Over_Async();
-
-        }else if(other.tag == "Star"){
+            StartCoroutine(Chet_Async());
+        }
+        else if (other.tag == "Star")
+        {
             //Thực hiện ăn sao
             starCount++;
             GameManager.Instance.AnSao(starCount);
         }
         else if (other.tag == "Treasure")
         {
-            _isAlive = false;
-            //Game Win
-            StartCoroutine(GameManager.Instance.Game_Win());
+            if (other.gameObject.GetComponent<Treasure>().isFake)
+                StartCoroutine(Chet_Async(2));
+            else Thang();
         }
         else if (other.tag == "Symbol_Cut")
         {
@@ -52,9 +52,22 @@ public class ShipController : MonoBehaviour
             Destroy(other.gameObject, 1f);
             co_Symbol_Cut = true;
         }
-        else if (other.gameObject.name == "Snake")
+        else if (other.gameObject.name == "SnakeZone")
         {
+            other.gameObject.SetActive(false);
             print("You wake up the snake!");
+        }
+        else if (other.gameObject.name == "SnakeTrigger")
+        {
+            other.gameObject.SetActive(false);
+            if (other.transform.parent.GetComponent<Snake>().IsAlive)
+                StartCoroutine(Chet_Async(2));
+        }
+        else if (other.gameObject.name == "Key")
+        {
+            co_Key = true;
+            iTween.ScaleTo(other.gameObject, Vector3.zero, 1);
+            Destroy(other.gameObject, 1f);
         }
     }
 
@@ -65,14 +78,30 @@ public class ShipController : MonoBehaviour
             other.gameObject.GetComponent<HingeJoint2D>().enabled = false;
             co_Symbol_Cut = false;
         }
+        else if (other.gameObject.name == "Door" && co_Key)
+        {
+            iTween.MoveTo(other.gameObject, other.gameObject.transform.position + Vector3.up * 2, 1f);
+        }
     }
 
-    public void Chet()
+    public IEnumerator Chet_Async(float time = 0)
     {
         print("Chết");
-        _isAlive = false;
+        yield return new WaitForSeconds(time);
         animator.SetTrigger("Chet");
+        _isAlive = false;
         StartCoroutine(GameManager.Instance.Game_Over_Async());
-        Destroy(this.gameObject,2);
+        Destroy(this.gameObject, 3);
+    }
+
+    public IEnumerator Wait(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }
+    public void Thang()
+    {
+        print("Thắng");
+        _isAlive = false;
+        StartCoroutine(GameManager.Instance.Game_Win());
     }
 }

@@ -46,7 +46,7 @@ public class ShipMovement : MonoBehaviour
             MoveByKeyboard();
         }
 
-        if (isMoving)
+        if (isMoving && ship.IsAlive)
         {
             force.x = currentDir.x;
             force.y = currentDir.y;

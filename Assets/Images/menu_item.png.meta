@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7af96eccf09a24247923e7fce858c108
-timeCreated: 1434054408
+timeCreated: 1435401866
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -38,6 +38,7 @@ TextureImporter:
     21300062: the_saw
     21300064: rock_1
     21300066: button_blank
+    21300068: panel_lose
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -350,6 +351,16 @@ TextureImporter:
         y: 651
         width: 83
         height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: panel_lose
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 57
+        width: 574
+        height: 356
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

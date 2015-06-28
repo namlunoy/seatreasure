@@ -20,21 +20,12 @@ public class ShipMovement : MonoBehaviour
         joystick.FingerLiftedEvent += joystick_FingerLiftedEvent;
         joystick.FingerTouchedEvent += joystick_FingerTouchedEvent;
         joystick.ControllerMovedEvent += joystick_ControllerMovedEvent;
+
     }
 
     void joystick_ControllerMovedEvent(Vector3 dir, CNAbstractController arg2)
     {
-      currentDir = dir.normalized;
-        print(currentDir);
-        force.x = currentDir.x;
-        force.y = currentDir.y;
-
-        //transform.Translate(currentDir * speed * Time.deltaTime);
-        rig.AddForce(force * speed);
-
-        if (currentDir.x >= 0)
-            transform.localScale = new Vector3(1, 1, 1);
-        else transform.localScale = new Vector3(-1, 1, 1);
+        currentDir = dir.normalized;
     }
 
     void joystick_FingerTouchedEvent(CNAbstractController obj)
@@ -44,28 +35,38 @@ public class ShipMovement : MonoBehaviour
 
     void joystick_FingerLiftedEvent(CNAbstractController obj)
     {
-       // Stop(currentDir);
+        isMoving = false;
+       // rig.velocity = Vector2.zero;
     }
 
     void Update()
     {
         if (ship.IsAlive)
         {
-            Move();
+            MoveByKeyboard();
         }
-    }
 
-    //Dừng lại và đẩy nó đi thêm 1 đoạn nữa
-    private void Stop(Vector3 direction)
-    {
         if (isMoving)
         {
-            ship.GetComponent<Rigidbody2D>().AddForce(direction * 80);
-            isMoving = false;
+            force.x = currentDir.x;
+            force.y = currentDir.y;
+
+            //transform.Translate(currentDir * speed * Time.deltaTime);
+            rig.AddForce(force * speed);
+
+            if (currentDir.x >= 0)
+                transform.localScale = new Vector3(1, 1, 1);
+            else transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 
-    private void Move()
+    void FixedUpdate()
+    {
+       
+    }
+
+
+    private void MoveByKeyboard()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {

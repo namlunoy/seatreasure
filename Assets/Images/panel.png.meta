@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6ecf798f38cfde4438f1b0b5f05aee94
-timeCreated: 1435483563
+timeCreated: 1435503662
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,7 @@ TextureImporter:
     21300002: panel_pause
     21300004: empty
     21300006: daulau
+    21300008: Door2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -90,6 +91,16 @@ TextureImporter:
         y: 392
         width: 261
         height: 328
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Door2
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 231
+        width: 283
+        height: 105
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

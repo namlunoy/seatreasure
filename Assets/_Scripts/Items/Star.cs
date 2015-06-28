@@ -5,8 +5,10 @@ public class Star : MonoBehaviour
 {
     private Animator animator;
     private Vector3 originalPos;
+    private AudioSource audio;
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         originalPos = transform.position;
         StartCoroutine(Rigging());
@@ -27,7 +29,10 @@ public class Star : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Ship")
+        {
+            audio.Play();
             animator.SetTrigger("GetStar");
+        }
     }
 
 

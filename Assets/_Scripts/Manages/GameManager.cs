@@ -14,6 +14,11 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    private AudioSource audio;
+    public AudioClip sound_win;
+    public AudioClip sound_lose;
+    public AudioClip sound_game;
+
     //Biến này để truy cập vào nó tại mọi nơi
     public static GameManager Instance;
     public static int selectedLevel = 1;
@@ -28,6 +33,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Instance = this;
+        audio = GetComponent<AudioSource>();
+        audio.clip = sound_game;
+        audio.Play();
         print("Selected level: " + selectedLevel);
     }
 
@@ -48,6 +56,12 @@ public class GameManager : MonoBehaviour
         UserData.Instance.Save();
 
         yield return new WaitForSeconds(2f);
+
+
+        audio.Stop();
+        audio.clip = sound_win;
+        audio.Play();
+
         foreach (GameObject o in toTurnOff)
             o.SetActive(false);
         panel_win.SetActive(true);
@@ -62,6 +76,11 @@ public class GameManager : MonoBehaviour
         foreach (GameObject o in toTurnOff)
             o.SetActive(false);
         yield return new WaitForSeconds(2f);
+        
+        audio.Stop();
+        audio.clip = sound_lose;
+        audio.Play();
+
         print("show panel");
         panel_lose.SetActive(true);
     }

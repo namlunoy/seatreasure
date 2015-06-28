@@ -89,6 +89,7 @@ public class ShipController : MonoBehaviour
         print("Chết");
         yield return new WaitForSeconds(time);
         animator.SetTrigger("Chet");
+        GetComponent<AudioSource>().Play();
         _isAlive = false;
         StartCoroutine(GameManager.Instance.Game_Over_Async());
         Destroy(this.gameObject, 3);

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Boom : MonoBehaviour
 {
+    private AudioSource audio;
     public Text txt;
     private int time;
     private bool isCounting = false;
@@ -12,6 +13,8 @@ public class Boom : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+
         if (!int.TryParse(txt.text, out time))
             time = 3;
 
@@ -43,9 +46,9 @@ public class Boom : MonoBehaviour
         };
 
         txt.text = "";
-
+        audio.Play();
         iTween.ShakePosition(Camera.main.gameObject, new Vector3(1, 1, 1), 0.5f);
-
+        
         Collider2D[] things = Physics2D.OverlapCircleAll(transform.position, phamViNo);
 
         foreach (Collider2D o in things)

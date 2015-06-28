@@ -31,10 +31,11 @@ public class Treasure : MonoBehaviour
             daulau.SetActive(true);
         }
 
-        isOpened = true;
+        isOpened = true; GetComponent<AudioSource>().Play();
         iTween.ShakePosition(this.gameObject, iTween.Hash("time", 1, "amount", new Vector3(0.1f, 0.1f, 0)));
         yield return new WaitForSeconds(1);
         Vector3 rotate = isTheLeftOne == false ? new Vector3(0, 0, -20 * Mathf.PI / 180f) : new Vector3(0, 0, 20 * Mathf.PI / 180f);
+       
         iTween.RotateBy(theOpen.gameObject, iTween.Hash("time", 1, "easetype", iTween.EaseType.easeOutCirc, "amount", rotate));
 
         if (isFake)
